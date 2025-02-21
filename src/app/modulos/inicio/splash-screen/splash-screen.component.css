@@ -11,12 +11,31 @@
   width: 100%;
   height: 100%;
   z-index: 100;
+  transition: transform 1s ease-in-out;
 }
 
 .app-label {
   color: var(--text-color);
   font-size: 1.5em;
   letter-spacing: 0.2em;
+ 
+}
+
+.logo-label{
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.logo-label:first-child {
+  margin-right: 10px;
+}
+
+.logo-label.active{
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
 }
 
 .app-logo {
@@ -26,10 +45,26 @@
   margin-bottom: 50px;
 }
 
-.app-logo .logo{
+.app-logo .logo {
   width: 100px;
   height: 100px;
   fill: var(--text-color);
   transform: rotate(180deg);
   font-size: 6em;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Clase para desplazar el splash hacia arriba */
+.splash-hide {
+  transform: translateY(-100%);
 }

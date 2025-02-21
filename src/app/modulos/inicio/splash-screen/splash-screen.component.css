@@ -1,5 +1,5 @@
 .app-splash-screen {
-  background: var(--primary-color);
+  background: var(--text-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@
 }
 
 .app-label {
-  color: var(--text-color);
+  color: var(--primary-color);
   font-size: 1.5em;
   letter-spacing: 0.2em;
  
@@ -48,7 +48,7 @@
 .app-logo .logo {
   width: 100px;
   height: 100px;
-  fill: var(--text-color);
+  fill: var(--primary-color);
   transform: rotate(180deg);
   font-size: 6em;
   animation: fadeIn 1.5s ease-in-out;
